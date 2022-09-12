@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int p=0,n=0,z=0,inp=0;
+	for(int i=0; i<true ; i++)
+	{
+			cout<<"enter a integer (-1 to quit):";
+			cin>>inp;
+}
+if(inp==-1)
+{
+	cout<<"exit";
+	exit(0);
+}
+else
+{
+
+	while(inp!=0)
+	{
+		if(inp>0)
+		{
+			p++;
+		}
+		else if(inp<0)
+		{
+			n++;
+			
+		}
+		else
+		{
+			z++;
+		}
+	}
+	n++;
+	cout<<"you have entered ...\n";
+	cout<<"\t \t \n  positve number = ",p;
+	cout<<"\t \t \n negative number = ",n;
+	cout<<"\t zeroes number = ",z;
+	
+}
+}
