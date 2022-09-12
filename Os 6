@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+class Overload
+ {
+ public:
+  int operator ++(int count)
+  {
+  count = count + 1 ;
+  return count;
+  };
+  int operator --(int count)
+  {
+  count = count - 1 ;
+  return count;
+  };
+ };
+                     
+ int main()
+ {
+  int number_of_persons = 0 ;
+  char choice;
+  while ( 1 )
+  {
+  cout << "Enter your choice : 1. PRODUCER ( E )  2. CONSUMER( L)  3. EXIT(X) 4. Print (P) ."<<endl;
+
+  cin >> choice;
+
+  switch ( choice )
+  {
+  case 'E' :
+  number_of_persons = ++(number_of_persons);
+  cout << "Total number of PRODUCER is: ";
+  cout << number_of_persons;
+  cout << endl;
+  break;
+  case 'L' :
+     if(number_of_persons==0)
+cout<<"there is no producer so no consumer \n";
+else
+number_of_persons= --(number_of_persons);
+  cout << "\n Total number of CONSUMER is: ";
+  cout << number_of_persons;
+  cout << endl;
+  break;
+  case 'P' :
+  cout << "Total number of person in PERSONS is: ";
+  cout << number_of_persons;
+  cout << endl;
+  break;
+
+  case 'X' :
+  cout << "THEY ENTER EXIT"<< endl;
+  exit(0);
+  default :
+  cout << "Enter a correct choice."<< endl;
+  break;
+  }
+  }
+  return 0;
